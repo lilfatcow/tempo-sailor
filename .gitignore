@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.gitignore
+# Tempo
+
+node_modules/
+**/tempobook/dynamic/
+**/tempobook/storyboards/
