@@ -3,13 +3,12 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-const conditionalPlugins = [];
+const conditionalPlugins: Array<[string, Record<string, unknown>]> = [];
 
 if (process.env.TEMPO) {
   conditionalPlugins.push(['tempo-devtools/swc', {}]);
 }
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
